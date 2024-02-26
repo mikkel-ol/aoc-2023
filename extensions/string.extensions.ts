@@ -1,6 +1,7 @@
 declare global {
   interface String {
     toNumber(): number;
+    last(): string;
   }
 }
 
@@ -37,6 +38,12 @@ if (!String.prototype.toNumber) {
       default:
         return NaN;
     }
+  };
+}
+
+if (!String.prototype.last) {
+  String.prototype.last = function () {
+    return this.slice(-1);
   };
 }
 
