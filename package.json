@@ -1,0 +1,31 @@
+{
+  "name": "aoc-2023",
+  "version": "1.0.0",
+  "description": "AoC solutions",
+  "main": "main.ts",
+  "scripts": {
+    "build": "tsc --outDir build",
+    "start": "ts-node main.ts",
+    "watch": "nodemon -e ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikkel-ol/aoc-2023.git"
+  },
+  "author": "mikkel-ol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikkel-ol/aoc-2023/issues"
+  },
+  "homepage": "https://github.com/mikkel-ol/aoc-2023#readme",
+  "devDependencies": {
+    "@types/lodash": "^4.14.202",
+    "nodemon": "^3.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "lodash": "^4.17.21"
+  }
+}
