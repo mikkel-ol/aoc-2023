@@ -8,8 +8,13 @@ const folderPath = path.join(__dirname, "calendar");
 async function importAndExecute() {
   try {
     const files = await fs.readdir(folderPath);
+    const filteredFiles = files.filter(
+      (x) =>
+        (!x.includes(".d") && path.extname(x) === ".ts") ||
+        path.extname(x) === ".js"
+    );
 
-    for (const file of files) {
+    for (const file of filteredFiles) {
       const filePath = path.join(folderPath, file);
       const module = await import(filePath);
       const solution = module.default;
